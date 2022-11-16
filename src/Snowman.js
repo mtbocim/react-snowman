@@ -77,7 +77,8 @@ function Snowman({
       <div className="Snowman">
         <img src={(images)[nWrong]} alt={nWrong} />
         <p className="Snowman-word">{guessedWord()}</p>
-        <p>{generateButtons()}</p>
+        <p>{nWrong < maxWrong ? generateButtons(): "You Lose"}</p>
+        <p>Number wrong: {nWrong}</p>
       </div>
   );
 }
